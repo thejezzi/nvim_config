@@ -1,0 +1,5 @@
+-- require("barbecue").setup({
+--   symbols = {
+--     seperator = ">",
+--   },
+-- })
