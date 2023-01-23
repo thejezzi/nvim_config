@@ -1,4 +1,4 @@
-
+local util = require('flo.utils')
 --[=[
 
 install vscode js debug
@@ -19,19 +19,6 @@ local homedir = os.getenv("HOME");
 
 if homedir == nil then
   homedir = os.getenv("USERPROFILE");
-end
-
-function get_plugin_path(plugin_name, opt)
-  local data_folder = "~/.config/nvim/init.vim";
-  if os.getenv("USERPROFILE") ~= nil then
-    data_folder = homedir .. "\\AppData\\Local\\nvim-data";
-  end
-  local opt_or_start = "start";
-  if opt then
-    opt_or_start = "opt";
-  end
-  local path = data_folder .. "/site/pack/packer/" .. opt_or_start .. "/" .. plugin_name;
-  return path
 end
 
 local ms_vsc_debug_plugin = get_plugin_path('vscode-js-debug', true);
