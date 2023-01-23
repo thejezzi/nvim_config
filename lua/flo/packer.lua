@@ -104,7 +104,8 @@ return require('packer').startup(function(use)
   use {
     "microsoft/vscode-js-debug",
     opt = true,
-    run = "npm install --legacy-peer-deps && npm run compile"
+    run = "npm install --legacy-peer-deps && npm run compile",
+    tag = "v1.74.1"
   }
   use { "mxsdev/nvim-dap-vscode-js", requires = {"mfussenegger/nvim-dap"} }
 end)
