@@ -1,7 +1,5 @@
 local utils = require('flo.utils');
 
-print("Loading dap-vscode-js.lua")
-
 require("dap-vscode-js").setup({
   node_path = "node", -- Path of node executable. Defaults to $NODE_PATH, and then "node"
   debugger_path = utils.getPluginPath('vscode-js-debug', true), -- Path to vscode-js-debug installation.
@@ -20,7 +18,6 @@ require("dap-vscode-js").setup({
 
 for _, lang in ipairs({ "javascript" }) do
   -- vim.cmd("autocmd FileType " .. lang .. " lua require('dapui').open()")
-  print("Setting up DAP for " .. lang)
   require('dap').configurations[lang] = {
     {
       type = "pwa-node",

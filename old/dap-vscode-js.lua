@@ -23,7 +23,6 @@ end
 
 local ms_vsc_debug_plugin = get_plugin_path('vscode-js-debug', true);
 
-print("ms_vsc_debug_plugin: " .. ms_vsc_debug_plugin);
 
 dap_vscode_js.setup({
   node_path = "node",
