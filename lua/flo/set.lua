@@ -28,3 +28,14 @@ vim.opt.updatetime = 50
 vim.opt.signcolumn = "yes"
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+
+vim.opt.splitright = true
+
+-- set file line endings to unix
+-- vim.opt.fileformats = "unix"
+
+-- set clipboard to use system clipboard
+vim.opt.clipboard = "unnamedplus"
+
+-- set the default file encoding to utf-8
+vim.opt.encoding = "utf-8"

@@ -47,11 +47,22 @@ function getPluginPath(plugin_name, opt)
   return plugin_path;
 end
 
+function getMasonPackagePath(name)
+  local home = getHomeDirectory();
+  local nvim_data_path = concatToPath(home, ".local", "share", "nvim");
+  if isWindows() then
+    nvim_data_path = concatToPath(home, "AppData", "Local", "nvim-data");
+  end
+  local mason_path = concatToPath(nvim_data_path, "mason", "packages", name);
+  return mason_path;
+end
+
 return {
   getSeperator = getSeperator,
   isWindows = isWindows,
   getHomeDirectory = getHomeDirectory,
   concatToPath = concatToPath,
-  getPluginPath = getPluginPath
+  getPluginPath = getPluginPath,
+  getMasonPackagePath = getMasonPackagePath
 }
 

@@ -1,0 +1,16 @@
+-- See after/plugin/lsp-zero for the actual setup
+-- Had to setup rust-tools there because it needs to be setup with lsp-zero
+-- otherwise they mix up the autocompletion and other stuff.
+
+-- print("Setting up tools for rust development");
+--
+-- local rt = require("rust-tools");
+--
+-- rt.setup({
+--   server = {
+--     on_attach = function(_, bufnr)
+--       vim.keymap.set("n", "<leader>th", rt.hover_actions.hover_actions, { buffer = bufnr });
+--       vim.keymap.set("n", "<leader>ta", rt.code_action_group.code_action_group, { buffer = bufnr });
+--     end
+--   }
+-- })

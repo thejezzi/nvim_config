@@ -101,6 +101,7 @@ return require('packer').startup(function(use)
     end
   }
   use {'mfussenegger/nvim-dap'}
+  use { 'nvim-lua/plenary.nvim' }
   use {
     "microsoft/vscode-js-debug",
     opt = true,
@@ -108,4 +109,6 @@ return require('packer').startup(function(use)
     tag = "v1.74.1"
   }
   use { "mxsdev/nvim-dap-vscode-js", requires = {"mfussenegger/nvim-dap"} }
+  use { "neovim/nvim-lspconfig" }
+  use { "simrat39/rust-tools.nvim" }
 end)
